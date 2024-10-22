@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.jurassicfrontier"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.TRICERATOPS_FOSSIL.get());
+                        pOutput.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
 
 
                     })

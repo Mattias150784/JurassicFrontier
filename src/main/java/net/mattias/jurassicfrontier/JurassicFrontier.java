@@ -2,8 +2,11 @@ package net.mattias.jurassicfrontier;
 
 import com.mojang.logging.LogUtils;
 import net.mattias.jurassicfrontier.blocks.ModBlocks;
+import net.mattias.jurassicfrontier.entity.ModEntities;
+import net.mattias.jurassicfrontier.entity.client.TriceratopsRenderer;
 import net.mattias.jurassicfrontier.items.ModCreativeModeTabs;
 import net.mattias.jurassicfrontier.items.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -33,7 +36,7 @@ public class JurassicFrontier
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
-
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -57,9 +60,10 @@ public class JurassicFrontier
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
+              EntityRenderers.register(ModEntities.TRICERATOPS.get(), TriceratopsRenderer::new);
 
-        }
+
     }
+}
 }

@@ -1,5 +1,7 @@
 {
   "block.jurassicfrontier.triceratops_fossil": "Triceratops Fossil",
+  "item.jurassicfrontier.triceratops_spawn_egg": "Triceratops Spawn Egg",
+  "entity.jurassicfrontier.triceratops": "Triceratops",
 
   "creativetab.jurassicfrontier": "Jurassic Frontier"
 }
