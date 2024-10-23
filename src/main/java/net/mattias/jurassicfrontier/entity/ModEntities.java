@@ -16,7 +16,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<TriceratopsEntity>> TRICERATOPS =
             ENTITY_TYPES.register("triceratops", () -> EntityType.Builder.of(TriceratopsEntity::new, MobCategory.CREATURE)
-                    .sized(2.5f, 2.5f).build("triceratops"));
+                    .sized(4.2f, 3.2f).build("triceratops"));
 
 
 

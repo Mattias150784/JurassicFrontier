@@ -31,7 +31,6 @@ public class TriceratopsModel<T extends Entity> extends HierarchicalModel<T> {
 	private final ModelPart gHead;
 	private final ModelPart gJaw;
 	private final ModelPart gTongue;
-
 	public TriceratopsModel(ModelPart root) {
 		this.gRotation = root.getChild("gRotation");
 		this.gRoot = this.gRotation.getChild("gRoot");
